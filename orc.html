@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TH - INFORMATICA</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark mb-2 text-white" data-bs-theme="dark">
+    <div class="container-fluid text-white">
+        <img src="imgs/LOGO.png" alt="Logo" width="150" height="80" class="d-inline-block align-text-top">
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+          <li class="nav-item text-white">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item text-white">
+            <a class="nav-link text-white" href="orc.html">Orçamento</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+        <!-- Header-->
+        <!-- Section-->
+        
+        <section class="py-5">
+          
+          <div class="input-group mb-3 p-4">
+            <input value="" id="procurar_modelo" type="text" class="form-control" placeholder="Nome ou modelo do aparelho" aria-label="Nome ou modelo do aparelho" aria-describedby="button-addon2">
+            <button onclick="encontrarModelo()" class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
+          </div>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+            
+              <div class="mt-4">                 
+                  <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">FRONTAL C/ ARO</li>
+                    <li class="list-group-item d-flex justify-content-between text-success">Película <i class="bi bi-check"></i></li>
+                    <li class="list-group-item d-flex justify-content-between text-success">Acabamento<i class="bi bi-check"></i></li>
+                    <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-cash"></i><span id="dinheiro">00,00</span></li>
+                    <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-credit-card"></i><span id="cartao">00,00 até 3X</span></li>
+                    <button id="bnt_infor_com_aro" type="button" class="btn btn-secondary mt-2" data-bs-toggle="popover" data-bs-placement="right" data-bs-custom-class="custom-popover" data-bs-title="Tela com Aro" data-bs-content="É basicamente, uma tela com acabamento lateral de fabrica.">
+                      Informações do produto
+                    </button>
+                  </ul>   
+
+                
+                  
+                <hr>
+                <ul class="list-group" id="container-frontalSemAro">
+                  <li class="list-group-item active" aria-current="true">FRONTAL S/ ARO</li>
+                  <li class="list-group-item d-flex justify-content-between text-success">Película <i class="bi bi-check"></i></li>
+                  <li class="list-group-item d-flex justify-content-between text-danger">Acabamento<i class="bi bi-x"></i></li>
+                  <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-cash"></i><span id="dinheiro_2">00,00</span></li>
+                  <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-credit-card"></i><span id="cartao_2">00,00 até 3X</span></li>
+                  <button id="" type="button" class="btn btn-secondary mt-2" data-bs-toggle="popover" data-bs-placement="right" data-bs-custom-class="custom-popover" data-bs-title="Tela com Aro" data-bs-content="Usa o mesmo acabamento lateral (MOLDE) que esta no aparelho, caso seja da sua preferencia.">
+                    Informações do produto
+                  </button>
+                </ul>
+                <hr>
+                <ul class="list-group">
+                  <li class="list-group-item active" aria-current="true">CONECTOR DE CARGA</li>
+                  <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-cash"></i><span id="dinheiro_3">00,00</span></li>
+                  <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-credit-card"></i><span id="cartao_3">00,00 até 3X</span></li>
+                </ul>
+                <hr>
+                <ul class="list-group">
+                  <li class="list-group-item active" aria-current="true">OUTROS SERVIÇOS</li>
+                  <li class="list-group-item d-flex justify-content-between text-success"><i class="bi bi-whatsapp"></i><span>(77) 99999-9999</span></li>
+                  
+                </ul>                           
+              </div>
+
+            </div>
+            <div class="col">
+              
+              <div class="container px-4 px-lg-5 mt-2">
+                <div class="row gx-4 gx-lg-2 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">                   
+                  <div class="card m-2" style="width: 18rem;">
+                    <img id="img_aparelho" src="imgs/modelos/padrao.png" class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                      <h5 id="nome_aparelho" class="card-title">NOME DO APARELHO</h5>
+                      <p id="modelo_aparelho" class="card-title">MODEL</p>
+                    </div>
+                    <ul class="list-group list-group-flush">     
+                    </ul>
+                    <div class="card-body">
+                      <div class="bg-success p-2 w-100" style="width: 10rem;">
+                        <span class="text-white" id="preco_final"><i class="bi bi-award-fill"> GARANTIA DE 1 MÊS</i></span>
+                      </div>
+                    </div>
+                 </div>         
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; th infor. 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
